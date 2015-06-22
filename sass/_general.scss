@@ -1,6 +1,16 @@
-.headline{
+.headline-two{
+  font-family: Meiryo;
+  border: 1px solid #d8d8d8;
+  text-indent: 22px;
+  font-size: 18.21px;
+  color: #1c5094;
+  padding:16px 0 13px 11px;
+  background: url('assets/img/top/top_headline_bg.png') no-repeat;
+  background-position: 10px center;
+}
+.headline-three{
   width: 260px;
-  padding: 10px 0;
+  padding: 8px 0;
   font-weight: bold;
   font-family: Meiryo;
   font-size: 16px;
@@ -9,4 +19,10 @@
   text-align: center;
   background: #000000;
   margin: 18px 0 7px;
+}
+.normal-text{
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Meiryo;
+  color: #292929;
 }

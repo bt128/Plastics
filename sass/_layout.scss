@@ -1,4 +1,5 @@
 .l-header{
+  background: #ffffff;
   width: 1040px;
   padding: 0 20px;
   margin: auto;
@@ -9,26 +10,27 @@
       line-height: 17.61px;
       color: #ffffff;
       background: #1C5194;
-      padding: 7px 10px 6px 0;
-      @include clearfix;
-      p{
-        float: right;
-      }
+      text-align: right;
+      padding: 3px 10px 4px 0;
+
     }
     .header-top-banner{
-      margin: 5px 0 13px;
+      margin: 5px 0 9px;
       @include clearfix;
       a{
-        font-size: 0;
-        vertical-align: bottom;
+        float: left;
+        display: inline-block;
         &:nth-child(2){
-          margin: 0 15px 0 60px;
+          margin: 13px 17px 0 63px;
+        }
+        &:last-child{
+          margin: 15px 0 0;
         }
       }
     }
     .header-flow{
       background: url("assets/img/layout/header/header_flow_bg.jpg");
-      @include border-radius(10px);
+      @include border-radius(5px);
       width: 1040px;
       padding: 4px 0;
       border: 1px solid #6098e2;
@@ -40,6 +42,7 @@
          div{
            padding:0 5.5px;
            width: 249px;
+           cursor: pointer;
          }
          .arrow{
            width: 25px;
@@ -57,11 +60,15 @@
 }
 .l-banner{
   width: 1040px;
-  margin:20px auto;
+  margin:0 auto;
+  padding:20px 20px 15px;
+  background: #ffffff;
 }
 .l-navi{
+  background: #ffffff;
   width: 1040px;
-  margin:0 auto 20px;
+  margin:0 auto;
+  padding: 0 20px 20px;
   ul{
     @include clearfix;
     li{
@@ -70,6 +77,8 @@
   }
 }
 .l-content{
+  padding:0 20px;
+  background: #ffffff;
   width: 1040px;
   margin: auto;
   @include clearfix;
@@ -77,15 +86,17 @@
     width: 260px;
     float: left;
     .contact-title{
-      @extend .headline;
+      @extend .headline-three;
+      margin: 14px 0 7px;
     }
     .side-contact{
-      padding: 10px 10px 7px 6px;
+      margin:0 0 18px;
+      padding: 11px 7px 4px 7px;
       border: 1px solid #999999;
       .contact-detail{
         .side-tel{
           display: block;
-          margin: 5px 0 0 0;
+          margin: 0 0 0 5px;
         }
         .contact-button{
           margin: 10px 0 0;
@@ -105,7 +116,7 @@
           background: #ececec;
           font-family: Meiryo;
           padding: 8px 0 12px 6px;
-          margin: 7px 0 0;
+          margin: 7px 3px 0 0;
         }
       }
     }
@@ -118,6 +129,7 @@
       img{
         float: left;
         margin: 1px 0 2px;
+        cursor: pointer;
       }
     }
     .side-strengths{
@@ -127,12 +139,13 @@
         li{
           border: 1px solid #999999;
           border-bottom: none;
-          padding: 14px;
+          padding: 12px 0 11px 12px;
           text-indent: 24px;
           background: url("assets/img/layout/sidebar/side_list.png") no-repeat;
-          background-position: 14px;
+          background-position: 12px;
           &:first-child{
-            background: #d4d4d4;
+            background: #d4d4d4 url("assets/img/layout/sidebar/side_list.png") no-repeat;
+            background-position: 12px;
 
           }
           &:last-child{
@@ -162,25 +175,21 @@
     }
   }
   .l-top-content{
+    width: 760px;
     float: left;
+    padding: 0 0 0 20px;
     .top-strength{
       margin: 31px 0 0;
     }
     .top-headline{
+      margin: 35px 0 20px;
       border-bottom: 5px solid #1c5094;
-
       h2{
-        font-family: Meiryo;
-        border: 1px solid #d8d8d8;
-        text-indent: 14px;
-        font-size: 18.21px;
-        color: #1c5094;
-        padding:12px 0 15px 11px;
-        background: url('assets/img/top/top_headline_bg.png') no-repeat;
-        background-position: 8px center;
+        @extend .headline-two;
       }
     }
     .top-trouble{
+      margin: 19px 0 0 0;
       width: 760px;
       height: 396px;
       background: url("assets/img/top/top_trouble.png");
@@ -192,14 +201,127 @@
           line-height: 30px;
           font-weight: bold;
           color: #154a91;
-          padding: 0 0 0 30px;
+          padding: 0 0 0 36px;
           background: url('assets/img/top/top_trouble_icon.png') no-repeat;
           p{
             font-size: 14px;
             color: #292929;
+            line-height: 11px;
+            padding: 0 0 12px;
           }
         }
       }
     }
+    .top-plastic-process{
+      .top-plastic-text{
+        position: relative;
+        margin: 18px 0 0;
+        p{
+          margin: 0 0 15px;
+          @extend .normal-text;
+        }
+        ul{
+          margin: 0 0 15px;
+          li{
+            line-height: 19px;
+            @extend .normal-text;
+            &::before{
+              content: '\00b7';
+              font-weight: bold;
+              font-size: 20px;
+              font-family: helvetica, arial;
+            }
+          }
+        }
+        img{
+          position: absolute;
+          top:0;
+          right: 0;
+        }
+      }
+      
+    }
+    .top-comments{
+      p{
+        @extend .normal-text;
+      }
+    }
+    .top-posts{
+      .top-headline{
+        margin: 30px 0 10px;
+      }
+      dl{
+        @include clearfix;
+        height: 140px;
+        overflow-y: scroll;
+        dt{
+          float: left;
+          padding: 10px 10px 16px;
+          @extend .normal-text;
+          border-bottom: 1px dotted #7f7f7f;
+        }
+        dd{
+          float: left;
+          color: #1c5094;
+          @extend .normal-text;
+          width: 620px;
+          padding: 10px 10px 16px;
+          border-bottom: 1px dotted #7f7f7f;
+        }
+      }
+    }
+    .top-go-to-top{
+      margin: 48px 0 10px;
+      text-align: right;
+      a {
+        @extend .normal-text;
+        color: #1c5094;
+        text-decoration: underline;
+      }
+
+    }
+  }
+}
+.l-footer{
+  .wrap{
+    background: #fff;
+    width: 1040px;
+    padding: 0 20px;
+    margin: auto;
+    .footer-menu-list{
+      margin:15px auto 0;
+      width: 1040px;
+      padding: 0 0 10px;
+      ul{
+        @include clearfix;
+        text-align: center;
+        width: 635px;
+        margin: auto;
+        li{
+          display: inline-block;
+          padding: 0 0 0 20px;
+          background: url("assets/img/layout/footer/footer_list.png") no-repeat;
+          background-position: 0 7px;
+          -webkit-background-size: 12px;
+          background-size: 12px;
+          a{
+            font-size: 12.14px;
+            line-height: 30px;
+            font-family: Meiryo;
+            color: #292929;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  p{
+    text-align: center;
+    background: #1c5094;
+    padding: 8px 0;
+    font-size: 13.66px;
+    line-height: 17.62px;
+    color: #ffffff;
+    font-family: Meiryo;
   }
 }
